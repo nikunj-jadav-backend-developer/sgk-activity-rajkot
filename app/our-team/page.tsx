@@ -2,6 +2,7 @@ import Image from "next/image";
 import Header from "@/app/components/layout/Header";
 import RichText from "@/app/components/ui/RichText";
 import OurTeamCard from "@/app/components/ui/OurTeamCard";
+import Footer from "@/app/components/layout/Footer";
 
 const teamMembers = [
   {
@@ -121,6 +122,7 @@ export default function OurTeamPage() {
                 </div>
             </section>
         </main>
+      <Footer/>
     </>
     
   );
