@@ -76,12 +76,12 @@ export default function Footer() {
                 Privacy Policy
               </Link>
 
-              <Link
-                href="/government-jobs"
+              {/* <Link
+                href="/about-community"
                 className="whitespace-nowrap font-sans text-sm text-[#5C4650] transition hover:text-[#B84A6B]"
               >
-                Government Jobs
-              </Link>
+                About the Community
+              </Link> */}
             </nav>
           </div>
 
