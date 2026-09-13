@@ -2,7 +2,7 @@
 
 :root {
   --background: #FFFDD0;
-  --foreground: #171717;
+  --foreground: #bd5b5b;
 }
 
 @theme inline {
@@ -15,12 +15,12 @@
   --font-display: var(--font-playfair);
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
   }
-}
+} */
 
 body {
   background: var(--background);
