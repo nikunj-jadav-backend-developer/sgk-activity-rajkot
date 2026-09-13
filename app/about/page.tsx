@@ -12,7 +12,7 @@ export default function AboutPage() {
     <>
       <Header />
 
-      <main className="bg-[#FFF8F0]">
+      <main>
         <section className="px-4 py-12 md:py-16">
           <div className="mx-auto max-w-5xl">
 
