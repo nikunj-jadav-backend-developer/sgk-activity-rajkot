@@ -44,6 +44,7 @@ export default function Header() {
           <Link href="/">Home</Link>
           <Link href="/about">About</Link>
           <Link href="/services">Services</Link>
+          <Link href="/our-team">Our Team</Link>
           <Link href="/contact">Contact</Link>
 
           <Link
