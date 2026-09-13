@@ -19,7 +19,7 @@ export default function Header() {
           className="flex min-w-0 items-center gap-3"
         >
           <Image
-            src="/uploads/site_logo_new.png"
+            src="/images/site_logo_new.png"
             alt="Site Logo"
             width={80}
             height={80}
@@ -43,7 +43,6 @@ export default function Header() {
 
           <Link href="/">Home</Link>
           <Link href="/about">About</Link>
-          <Link href="/services">Services</Link>
           <Link href="/our-team">Our Team</Link>
           <Link href="/contact">Contact</Link>
 
@@ -119,14 +118,6 @@ export default function Header() {
               className="rounded-lg px-4 py-3 font-sans hover:bg-[#F5E7D0]"
             >
               About
-            </Link>
-
-            <Link
-              href="/services"
-              onClick={() => setIsMenuOpen(false)}
-              className="rounded-lg px-4 py-3 font-sans hover:bg-[#F5E7D0]"
-            >
-              Services
             </Link>
 
             <Link
