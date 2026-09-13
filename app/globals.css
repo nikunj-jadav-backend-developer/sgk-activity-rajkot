@@ -27,3 +27,19 @@ body {
   color: var(--foreground);
   font-family: var(--font-noto-sans), sans-serif;
 }
+
+
+.rich-text-hero p {
+  max-width: 42rem;
+  margin: 1.25rem auto 0;
+  font-family: var(--font-noto-sans-gujarati);
+  font-size: 1rem;
+  line-height: 1.75rem;
+  color: #5C4650;
+}
+
+@media (min-width: 768px) {
+  .rich-text-hero p {
+    font-size: 1.125rem;
+  }
+}
