@@ -1,4 +1,5 @@
 import Header from "@/app/components/layout/Header";
+import Footer from "@/app/components/layout/Footer";
 import { Metadata } from "next";
 import RichText from "@/app/components/ui/RichText";
 export const metadata: Metadata = {
@@ -32,6 +33,7 @@ export default function AboutPage() {
           </div>
         </section>
       </main>
+      <Footer/>
     </>
   );
 }
