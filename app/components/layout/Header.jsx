@@ -63,7 +63,7 @@ export default function Header() {
           </Link>
 
           <Link
-            href="/contact"
+            href="mailto:sgkactivitygroup@gmail.com"
             className="flex h-11 items-center justify-center gap-2 rounded-full bg-[#71324F] px-5 font-gujarati font-semibold text-white"
           >
             <Image
@@ -146,7 +146,7 @@ export default function Header() {
             </Link>
 
             <Link
-              href="/contact"
+              href="mailto:sgkactivitygroup@gmail.com"
               onClick={() => setIsMenuOpen(false)}
               className="mt-2 flex h-11 items-center justify-center gap-2 rounded-full bg-[#71324F] font-gujarati font-semibold text-white"
             >
