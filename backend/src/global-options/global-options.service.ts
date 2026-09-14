@@ -64,4 +64,26 @@ export class GlobalOptionsService {
     }
     return result.rows[0];
   }
+
+  async remove(optionKey: string) {
+  const result = await this.pool.query(
+    `
+    DELETE FROM global_options
+    WHERE option_key = $1
+    RETURNING option_key, option_value
+    `,
+    [optionKey],
+  );
+
+  if (result.rowCount === 0) {
+    throw new NotFoundException(
+      `Global option '${optionKey}' not found`,
+    );
+  }
+
+  return {
+    message: "Global option deleted successfully",
+    data: result.rows[0],
+  };
+}
 }
