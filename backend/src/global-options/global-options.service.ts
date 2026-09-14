@@ -1,7 +1,7 @@
-import { Inject, Injectable , ConflictException } from "@nestjs/common";
+import { Inject, Injectable , ConflictException , NotFoundException } from "@nestjs/common";
 import { Pool } from "pg";
 import { CreateGlobalOptionDto } from "./dto/create-global-option.dto";
-
+import { UpdateGlobalOptionsDto } from "./dto/update-global-option.dto";
 
 @Injectable()
 export class GlobalOptionsService {
@@ -48,5 +48,20 @@ export class GlobalOptionsService {
         }
         throw error;
     }
+  }
+
+  async update(optionKey: string,updateGlobalOptionDto: UpdateGlobalOptionsDto){
+    const { optionValue } = updateGlobalOptionDto;
+    const result = await this.pool.query(
+      `
+      UPDATE global_options SET option_value = $1, updated_at = NOW() WHERE option_key = $2 RETURNING option_key, option_value, updated_at
+      `,[optionValue, optionKey]
+    );
+    if(result.rowCount == 0){
+      throw new NotFoundException(
+        `Global option '${optionKey}' not found`,
+      );
+    }
+    return result.rows[0];
   }
 }
