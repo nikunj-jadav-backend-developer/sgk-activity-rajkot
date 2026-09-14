@@ -1,6 +1,6 @@
-import { Controller, Get } from "@nestjs/common";
+import { Body, Controller, Get, Post } from "@nestjs/common";
 import { GlobalOptionsService } from "./global-options.service";
-
+import { CreateGlobalOptionDto } from "./dto/create-global-option.dto";
 @Controller("global-options")
 export class GlobalOptionsController {
   constructor(
@@ -10,5 +10,12 @@ export class GlobalOptionsController {
   @Get()
   findAll() {
     return this.globalOptionsService.findAll();
+  }
+
+  @Post()
+  create(@Body() createGlobalOptionDto : CreateGlobalOptionDto){
+    return this.globalOptionsService.create(
+      createGlobalOptionDto
+    )
   }
 }
